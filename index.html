@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marie's House Assisted Living — East Oklahoma City's only women-only boutique senior assisted living facility. All-women staff. ADvantage waiver accepted. Join our waitlist today.">
+  <meta name="keywords" content="assisted living Oklahoma City, women only assisted living OKC, senior care East OKC, ADvantage waiver assisted living, Marie's House OKC">
+  <meta property="og:title" content="Marie's House Assisted Living | Oklahoma City">
+  <meta property="og:description" content="East Oklahoma City's only women-only senior assisted living. All-women residents, all-women staff. Built in the spirit of Marie.">
+  <meta property="og:image" content="https://marieshouseokc.com/og-image.jpg">
+  <meta name="theme-color" content="#1B3A2D">
+  <title>Marie's House Assisted Living | Women's Senior Care — Oklahoma City, OK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --ink:     #1A1A1A;
+      --ink-mid: #3D3D3D;
+      --ink-low: #666;
+      --forest:  #1B3A2D;
+      --forest2: #2D5A45;
+      --gold:    #C8973C;
+      --gold2:   #E8B86D;
+      --gold-text: #7A5616;  /* darker gold — WCAG AA on white (6.62:1) and cream (6.11:1) */
+      --cream:   #FDF5E6;
+      --cream2:  #F5E8D0;
+      --blush:   #F2D5D8;
+      --white:   #FFFFFF;
+      --border:  rgba(200,151,60,.22);
+      --sh:      0 4px 24px rgba(27,58,45,.10);
+      --sh2:     0 8px 40px rgba(27,58,45,.18);
+      --r:       16px;
+      --rs:      8px;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Nunito', 'Segoe UI', sans-serif;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 18px; }
+    body { font-family: var(--sans); line-height: 1.75; color: var(--ink); background: var(--cream); overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--forest); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+    /* ── SKIP NAV ── */
+    .skip { position: absolute; top: -100px; left: 1rem; background: var(--forest); color: #fff; padding: 10px 18px; border-radius: var(--rs); font-weight: 700; text-decoration: none; z-index: 9999; transition: top .2s; }
+    .skip:focus { top: 1rem; }
+
+    /* ── UTIL ── */
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+    .pad  { padding: 5rem 0; }
+    .pad-sm { padding: 3.5rem 0; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(200,151,60,.14); border: 1px solid var(--gold2);
+      color: var(--forest); border-radius: 100px;
+      padding: .28rem .9rem; font-size: .75rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+      padding: .82rem 1.9rem; border-radius: 100px;
+      font-family: var(--sans); font-size: 1rem; font-weight: 700;
+      cursor: pointer; border: 2px solid transparent;
+      text-decoration: none; transition: all .25s ease;
+      min-height: 50px; line-height: 1.2;
+    }
+    .btn-dark  { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .btn-dark:hover  { background: var(--forest2); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,58,45,.28); }
+    .btn-gold  { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .btn-gold:hover  { background: #b07a28; color: #fff; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--forest); border-color: var(--forest); }
+    .btn-ghost:hover { background: var(--forest); color: #fff; }
+
+    h1,h2,h3,h4 { font-family: var(--serif); line-height: 1.18; }
+    h1 { font-size: clamp(2.4rem,6vw,4rem); font-weight: 600; }
+    h2 { font-size: clamp(1.9rem,4.5vw,2.9rem); font-weight: 600; }
+    h3 { font-size: clamp(1.3rem,3vw,1.85rem); font-weight: 600; }
+    h4 { font-size: 1.1rem; font-weight: 700; font-family: var(--sans); }
+
+    .sec-label  { text-align: center; margin-bottom: .65rem; }
+    .sec-title  { text-align: center; color: var(--forest); margin-bottom: .9rem; }
+    .sec-sub    { text-align: center; color: var(--ink-low); font-size: 1rem; max-width: 600px; margin: 0 auto 3rem; line-height: 1.75; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 900;
+      background: rgba(27,58,45,.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,151,60,.22);
+    }
+    .hdr { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .7rem 1.25rem; max-width: 1160px; margin: 0 auto; }
+
+    .logo-link { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+    .logo-link img { height: 54px; width: auto; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,.94); padding: 3px 8px; }
+    .logo-txt { color: #fff; font-family: var(--serif); font-size: 1.05rem; font-weight: 600; line-height: 1.18; }
+    .logo-txt span { display: block; font-family: var(--sans); font-size: .67rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold2); font-weight: 700; }
+
+    .main-nav { display: flex; align-items: center; gap: .15rem; }
+    .main-nav a { color: rgba(255,255,255,.82); text-decoration: none; padding: .45rem .8rem; border-radius: var(--rs); font-size: .88rem; font-weight: 700; transition: all .2s; }
+    .main-nav a:hover { color: var(--gold2); background: rgba(255,255,255,.07); }
+
+    .hdr-cta { display: flex; align-items: center; gap: .65rem; }
+    .hdr-phone { color: var(--gold2); text-decoration: none; font-weight: 800; font-size: .9rem; display: flex; align-items: center; gap: .3rem; }
+    .hdr-phone:hover { color: #fff; }
+
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 7px; flex-direction: column; gap: 5px; border-radius: var(--rs); }
+    .hamburger span { display: block; width: 25px; height: 2.5px; background: #fff; border-radius: 2px; transition: all .3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    .mob-nav { display: none; flex-direction: column; background: var(--forest); padding: 1rem 1.25rem 1.5rem; border-top: 1px solid rgba(200,151,60,.2); }
+    .mob-nav.open { display: flex; }
+    .mob-nav a { color: rgba(255,255,255,.82); text-decoration: none; padding: .7rem 0; font-size: 1.05rem; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .mob-nav a:last-child { border-bottom: none; }
+    .mob-nav a:hover { color: var(--gold2); }
+
+    /* ── HERO ── */
+    .hero { position: relative; min-height: 90vh; display: flex; align-items: center; background: var(--forest); overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=75'); background-size: cover; background-position: center; opacity: .16; }
+    .hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at 15% 50%, rgba(200,151,60,.07) 0%, transparent 60%); }
+    .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr .9fr; gap: 3.5rem; align-items: center; padding: 4rem 0; }
+
+    .hero-badge { display: inline-flex; align-items: center; gap: .45rem; background: rgba(200,151,60,.18); border: 1px solid rgba(200,151,60,.45); color: var(--gold2); border-radius: 100px; padding: .38rem 1rem; font-size: .77rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .hero-title { font-size: clamp(2.6rem,5.5vw,4.1rem); font-weight: 600; color: #fff; line-height: 1.1; margin-bottom: 1.1rem; }
+    .hero-title em { font-style: italic; color: var(--gold2); }
+    .hero-desc { font-size: 1.07rem; color: rgba(255,255,255,.78); line-height: 1.75; margin-bottom: 1.9rem; max-width: 520px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 2.5rem; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; border-top: 1px solid rgba(255,255,255,.14); padding-top: 2rem; }
+    .stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold2); line-height: 1; margin-bottom: .2rem; }
+    .stat-lbl { font-size: .78rem; color: rgba(255,255,255,.6); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; line-height: 1.4; }
+
+    /* Hero image panel */
+    .hero-img-wrap { position: relative; }
+    .hero-img-frame { border-radius: 20px; overflow: hidden; }
+    .hero-img-frame img { width: 100%; height: 460px; object-fit: cover; object-position: top center; display: block; }
+    .hero-float { position: absolute; bottom: -1rem; left: -1rem; background: #fff; border-radius: var(--r); padding: .9rem 1.1rem; box-shadow: var(--sh2); display: flex; align-items: center; gap: .7rem; z-index: 3; }
+    .float-icon { width: 44px; height: 44px; background: var(--blush); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.3rem; }
+    .float-txt strong { display: block; font-size: .92rem; color: var(--forest); font-weight: 800; }
+    .float-txt span { font-size: .76rem; color: var(--ink-low); }
+    .hero-float2 { position: absolute; top: 1.25rem; right: -1.25rem; background: var(--forest); border-radius: var(--r); padding: .7rem .9rem; box-shadow: var(--sh2); z-index: 3; text-align: center; }
+    .f2-num { font-family: var(--serif); font-size: 1.75rem; font-weight: 700; color: var(--gold2); line-height: 1; }
+    .f2-lbl { font-size: .7rem; color: rgba(255,255,255,.7); font-weight: 700; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: var(--forest); border-bottom: 2px solid var(--gold); }
+    .trust-inner { display: flex; align-items: stretch; overflow-x: auto; scrollbar-width: none; max-width: 1160px; margin: 0 auto; }
+    .trust-inner::-webkit-scrollbar { display: none; }
+    .trust-item { display: flex; align-items: center; gap: .55rem; padding: .9rem 1.6rem; color: var(--gold2); font-weight: 800; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; border-right: 1px solid rgba(200,151,60,.25); flex-shrink: 0; }
+    .trust-item:last-child { border-right: none; }
+
+    /* ── ABOUT ── */
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
+    .about-imgs { position: relative; }
+    .about-main { border-radius: 20px; overflow: hidden; box-shadow: var(--sh2); }
+    .about-main img { width: 100%; height: 420px; object-fit: cover; object-position: top center; display: block; }
+    .about-sm { position: absolute; bottom: -1.75rem; right: -1.75rem; width: 190px; border-radius: 14px; overflow: hidden; box-shadow: var(--sh2); border: 4px solid #fff; }
+    .about-sm img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .about-seal { position: absolute; top: -1.25rem; left: -1.25rem; background: var(--forest); color: #fff; border-radius: 14px; padding: 1.1rem; text-align: center; width: 120px; box-shadow: var(--sh2); }
+    .seal-icon { font-size: 1.75rem; margin-bottom: .2rem; }
+    .seal-txt { font-size: .7rem; font-weight: 800; line-height: 1.3; }
+
+    .about-text .pill { margin-bottom: .9rem; }
+    .about-text h2 { color: var(--forest); margin-bottom: 1.1rem; }
+    .about-text p { color: var(--ink-mid); margin-bottom: .95rem; font-size: 1rem; }
+    .about-checks { list-style: none; margin-bottom: 1.75rem; }
+    .about-checks li { display: flex; align-items: flex-start; gap: .7rem; margin-bottom: .6rem; font-weight: 700; font-size: .96rem; color: var(--ink); }
+    .ck { width: 22px; height: 22px; background: var(--forest); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .ck svg { width: 11px; height: 11px; stroke: #fff; }
+
+    /* ── MARIE STORY ── */
+    .marie-story { background: linear-gradient(135deg, var(--forest) 0%, #234D38 100%); padding: 5rem 0; position: relative; overflow: hidden; }
+    .marie-story::before { content: ''; position: absolute; top: -40%; right: -8%; width: 520px; height: 520px; background: radial-gradient(circle, rgba(200,151,60,.09) 0%, transparent 70%); pointer-events: none; }
+    .story-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: center; }
+    .story-img { border-radius: 20px; overflow: hidden; box-shadow: var(--sh2); }
+    .story-img img { width: 100%; height: 480px; object-fit: cover; object-position: top center; display: block; }
+    .story-text { color: #fff; }
+    .story-text .pill { background: rgba(200,151,60,.22); border-color: rgba(200,151,60,.5); color: var(--gold2); margin-bottom: 1.1rem; }
+    .story-text h2 { color: #fff; margin-bottom: .4rem; }
+    .story-text h2 em { font-style: italic; color: var(--gold2); }
+    .story-subtitle { font-size: 1.05rem; color: rgba(255,255,255,.65); font-style: italic; margin-bottom: 1.5rem; font-family: var(--serif); }
+    .story-text p { color: rgba(255,255,255,.82); font-size: 1rem; margin-bottom: 1rem; line-height: 1.8; }
+    .story-quote { border-left: 3px solid var(--gold); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .story-quote p { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--gold2); margin: 0; line-height: 1.6; }
+
+    /* ── WOMEN-ONLY ── */
+    .women-sec { background: var(--cream2); }
+    .women-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 1rem; }
+    .women-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); padding: 1.75rem 1.25rem; text-align: center; transition: all .3s; }
+    .women-card:hover { transform: translateY(-4px); box-shadow: var(--sh2); border-color: var(--gold); }
+    .wc-icon { width: 58px; height: 58px; background: var(--forest); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto .9rem; font-size: 1.6rem; }
+    .women-card h4 { color: var(--forest); margin-bottom: .45rem; }
+    .women-card p { font-size: .88rem; color: var(--ink-low); line-height: 1.65; }
+
+    /* ── SERVICES ── */
+    .services { background: var(--white); }
+    .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+    .svc-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--r); padding: 1.9rem 1.65rem; transition: all .3s; }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--sh2); border-color: var(--gold); }
+    .svc-icon { width: 52px; height: 52px; background: var(--forest); border-radius: 13px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.1rem; }
+    .svc-card h4 { color: var(--forest); margin-bottom: .5rem; }
+    .svc-card p { color: var(--ink-mid); font-size: .93rem; line-height: 1.65; }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--cream2); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .85rem; }
+    .gallery-item { border-radius: var(--r); overflow: hidden; position: relative; background: var(--forest); }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; object-position: top center; display: block; transition: transform .4s ease; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(27,58,45,.82)); color: #fff; padding: 1.5rem .9rem .85rem; font-size: .8rem; font-weight: 700; opacity: 0; transition: opacity .3s; }
+    .gallery-item:hover .gallery-cap { opacity: 1; }
+
+    /* ── FOUNDERS ── */
+    .founders { background: var(--white); }
+    .founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .founder-card { background: var(--cream); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: all .3s; }
+    .founder-card:hover { box-shadow: var(--sh2); transform: translateY(-4px); }
+    .founder-photo { width: 100%; height: 300px; object-fit: cover; object-position: top center; display: block; }
+    .founder-body { padding: 1.75rem; }
+    .founder-name { color: var(--forest); margin-bottom: .2rem; font-size: 1.5rem; }
+    .founder-role { font-size: .78rem; font-weight: 800; color: var(--gold-text); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; }
+    .founder-body p { color: var(--ink-mid); font-size: .95rem; line-height: 1.75; margin-bottom: .85rem; }
+    .founder-body p:last-child { margin-bottom: 0; }
+    .founder-quote { border-left: 3px solid var(--gold); padding-left: 1rem; margin: 1.1rem 0; }
+    .founder-quote p { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--forest); margin: 0; line-height: 1.6; }
+
+    /* admin card full-width */
+    .admin-card { background: var(--cream); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 280px 1fr; margin-top: 2.5rem; }
+    .admin-photo { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; min-height: 260px; }
+    .admin-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .admin-name { color: var(--forest); margin-bottom: .2rem; font-size: 1.5rem; }
+    .admin-role { font-size: .78rem; font-weight: 800; color: var(--gold-text); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; }
+    .admin-body p { color: var(--ink-mid); font-size: .95rem; line-height: 1.75; margin-bottom: .85rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--cream2); }
+    .test-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+    .test-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); padding: 1.85rem; }
+    .stars { color: var(--gold-text); font-size: .95rem; margin-bottom: .5rem; }
+    .qmark { font-family: var(--serif); font-size: 3.8rem; line-height: .5; color: var(--gold2); font-weight: 700; margin-bottom: .6rem; }
+    .test-text { font-size: .95rem; color: var(--ink-mid); line-height: 1.78; font-style: italic; margin-bottom: 1.1rem; }
+    .test-author { display: flex; align-items: center; gap: .7rem; }
+    .test-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold2); flex-shrink: 0; background: var(--blush); }
+    .author-name { font-weight: 800; font-size: .9rem; color: var(--forest); }
+    .author-rel { font-size: .77rem; color: var(--ink-low); }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { background: var(--cream); border: 1px solid var(--border); border-radius: var(--r); margin-bottom: .65rem; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 1.4rem; text-align: left; font-family: var(--sans); font-size: .97rem; font-weight: 700; color: var(--forest); transition: background .2s; min-height: 54px; }
+    .faq-q:hover { background: var(--cream2); }
+    .faq-q[aria-expanded="true"] { background: var(--forest); color: #fff; }
+    .faq-ico { width: 26px; height: 26px; border-radius: 50%; background: var(--cream2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .3s; }
+    .faq-q[aria-expanded="true"] .faq-ico { background: rgba(255,255,255,.18); transform: rotate(45deg); }
+    .faq-ico svg { width: 13px; height: 13px; }
+    .faq-a { display: none; padding: 0 1.4rem 1.15rem; color: var(--ink-mid); font-size: .95rem; line-height: 1.78; }
+    .faq-a.open { display: block; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--forest); color: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: start; }
+    .ci h2 { color: #fff; margin-bottom: .9rem; }
+    .ci > p { color: rgba(255,255,255,.72); font-size: 1rem; margin-bottom: 1.75rem; }
+    .c-detail { display: flex; align-items: flex-start; gap: .9rem; margin-bottom: 1.35rem; }
+    .c-ico { width: 46px; height: 46px; background: rgba(200,151,60,.18); border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem; }
+    .c-txt strong { display: block; font-size: .8rem; font-weight: 800; color: var(--gold2); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .15rem; }
+    .c-txt span, .c-txt a { font-size: .97rem; color: rgba(255,255,255,.82); }
+    .c-txt a { color: #fff; font-weight: 800; text-decoration: none; }
+    .c-txt a:hover { color: var(--gold2); }
+
+    .cf { background: #fff; border-radius: 20px; padding: 2.25rem; }
+    .cf h3 { color: var(--forest); margin-bottom: .4rem; font-size: 1.45rem; }
+    .cf > p { color: var(--ink-low); font-size: .88rem; margin-bottom: 1.5rem; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+    .fg { margin-bottom: .85rem; }
+    .fg label { display: block; font-weight: 800; font-size: .84rem; color: var(--forest); margin-bottom: .35rem; }
+    .fg label .req { color: #c0392b; }
+    .fg input, .fg select, .fg textarea { width: 100%; padding: .7rem .95rem; border: 1.5px solid #ddd; border-radius: var(--rs); font-family: var(--sans); font-size: .95rem; color: var(--ink); background: #fafafa; transition: border-color .2s; min-height: 46px; }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--forest); background: #fff; outline: none; box-shadow: 0 0 0 3px rgba(27,58,45,.09); }
+    .fg textarea { resize: vertical; min-height: 110px; }
+    .form-ok { display: none; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: var(--rs); padding: .9rem; color: #2e7d32; font-weight: 700; text-align: center; margin-top: .85rem; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: #111; color: rgba(255,255,255,.65); padding: 3rem 0 1.5rem; }
+    .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.25rem; }
+    .ft-brand img { height: 80px; width: auto; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,.88); padding: 5px 10px; margin-bottom: .9rem; }
+    .ft-brand p { font-size: .86rem; line-height: 1.7; max-width: 290px; }
+    .ft-col h5 { font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gold2); margin-bottom: .9rem; }
+    .ft-col ul { list-style: none; }
+    .ft-col ul li { margin-bottom: .45rem; }
+    .ft-col ul li a { color: rgba(255,255,255,.6); text-decoration: none; font-size: .88rem; transition: color .2s; }
+    .ft-col ul li a:hover { color: var(--gold2); }
+    .ft-btm { border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .65rem; font-size: .78rem; }
+    .ft-btm a { color: rgba(255,255,255,.45); text-decoration: none; }
+    .ft-btm a:hover { color: var(--gold2); }
+
+    /* ── CHATBOT ── */
+    .chat-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 800; }
+    .chat-fab-btn { width: 62px; height: 62px; border-radius: 50%; background: var(--forest); border: 3px solid var(--gold); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 22px rgba(27,58,45,.35); transition: all .3s; font-size: 1.55rem; position: relative; }
+    .chat-fab-btn:hover { transform: scale(1.08); }
+    .chat-badge { position: absolute; top: -6px; right: -6px; background: var(--gold); color: #fff; border-radius: 100px; padding: 2px 7px; font-size: .65rem; font-weight: 800; border: 2px solid #fff; white-space: nowrap; }
+    .chat-tip { position: absolute; right: calc(100% + .6rem); bottom: 50%; transform: translateY(50%); background: var(--forest); color: #fff; padding: .55rem .9rem; border-radius: 100px; font-size: .82rem; font-weight: 700; white-space: nowrap; box-shadow: var(--sh); opacity: 0; pointer-events: none; transition: opacity .25s; }
+    .chat-fab:hover .chat-tip { opacity: 1; }
+
+    .chat-win { position: fixed; bottom: calc(1.5rem + 78px); right: 1.5rem; width: 370px; max-height: 580px; background: #fff; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,.17); display: flex; flex-direction: column; z-index: 800; overflow: hidden; border: 1px solid var(--border); display: none; }
+    .chat-win.open { display: flex; animation: slideUp .3s ease; }
+    @keyframes slideUp { from { opacity:0; transform:translateY(18px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+
+    .chat-hdr { background: var(--forest); color: #fff; padding: .9rem 1.1rem; display: flex; align-items: center; gap: .7rem; }
+    .chat-av { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--gold); background: var(--blush); flex-shrink: 0; }
+    .chat-av img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .chat-hdr-name { font-weight: 800; font-size: .92rem; }
+    .chat-hdr-status { font-size: .72rem; color: rgba(255,255,255,.65); display: flex; align-items: center; gap: .3rem; }
+    .chat-hdr-status::before { content:''; display:inline-block; width:7px; height:7px; border-radius:50%; background:#4ade80; }
+    .chat-x { background: none; border: none; color: rgba(255,255,255,.65); cursor: pointer; font-size: 1.35rem; line-height: 1; padding: 0; margin-left: auto; transition: color .2s; }
+    .chat-x:hover { color: #fff; }
+    .chat-voice-btn { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.75); cursor: pointer; font-size: 1rem; padding: 4px 8px; border-radius: 8px; transition: all .2s; flex-shrink: 0; }
+    .chat-voice-btn:hover { background: rgba(255,255,255,.22); color: #fff; }
+    .chat-voice-btn[aria-pressed="true"] { background: rgba(200,151,60,.35); border-color: var(--gold2); color: var(--gold2); }
+
+    .chat-msgs { flex: 1; overflow-y: auto; padding: 1.1rem; display: flex; flex-direction: column; gap: .65rem; max-height: 350px; scrollbar-width: thin; }
+    .cmsg { display: flex; align-items: flex-end; gap: .45rem; animation: msgIn .25s ease; }
+    @keyframes msgIn { from{opacity:0;transform:translateY(7px)} to{opacity:1;transform:none} }
+    .cmsg.user { flex-direction: row-reverse; }
+    .bubble { max-width: 78%; padding: .7rem .95rem; border-radius: 15px; font-size: .87rem; line-height: 1.62; }
+    .cmsg.bot .bubble { background: var(--cream); color: var(--ink); border-bottom-left-radius: 4px; border: 1px solid var(--border); }
+    .cmsg.user .bubble { background: var(--forest); color: #fff; border-bottom-right-radius: 4px; }
+    .msg-av { width: 28px; height: 28px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+    .msg-av img { width: 100%; height: 100%; object-fit: cover; }
+    .typing .bubble { display: flex; align-items: center; gap: 4px; padding: .8rem 1rem; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-low); animation: bounce 1.2s infinite; }
+    .dot:nth-child(2){animation-delay:.2s} .dot:nth-child(3){animation-delay:.4s}
+    @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+
+    .quick-replies { display: flex; flex-wrap: wrap; gap: .35rem; padding: .4rem 1.1rem 0; }
+    .qr { background: var(--cream); border: 1px solid var(--border); border-radius: 100px; padding: .3rem .85rem; font-size: .77rem; font-weight: 700; color: var(--forest); cursor: pointer; transition: all .2s; white-space: nowrap; }
+    .qr:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+    .chat-input-area { padding: .65rem .9rem; border-top: 1px solid var(--border); display: flex; gap: .5rem; align-items: flex-end; }
+    .chat-input { flex: 1; border: 1.5px solid #ddd; border-radius: 11px; padding: .55rem .85rem; font-family: var(--sans); font-size: .87rem; resize: none; max-height: 90px; min-height: 40px; line-height: 1.5; transition: border-color .2s; }
+    .chat-input:focus { border-color: var(--forest); outline: none; }
+    .send-btn { width: 38px; height: 38px; border-radius: 9px; background: var(--forest); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; flex-shrink: 0; }
+    .send-btn:hover { background: var(--forest2); transform: scale(1.05); }
+    .send-btn svg { width: 17px; height: 17px; stroke: #fff; }
+    .chat-powered { text-align: center; font-size: .68rem; color: var(--ink-low); padding: .3rem; border-top: 1px solid #eee; }
+
+    /* ── SR ONLY ── */
+    .sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+    /* ── FADE-IN ── */
+    .fi { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .fi.on { opacity: 1; transform: none; }
+
+    /* ────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-inner       { grid-template-columns: 1fr; }
+      .hero-img-wrap    { display: none; }
+      .about-grid       { grid-template-columns: 1fr; }
+      .about-imgs       { display: none; }
+      .story-inner      { grid-template-columns: 1fr; }
+      .story-img        { display: none; }
+      .women-grid       { grid-template-columns: repeat(2,1fr); }
+      .svc-grid         { grid-template-columns: repeat(2,1fr); }
+      .founders-grid    { grid-template-columns: 1fr; }
+      .admin-card       { grid-template-columns: 1fr; }
+      .admin-photo      { height: 280px; }
+      .test-grid        { grid-template-columns: 1fr 1fr; }
+      .contact-grid     { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ft-grid          { grid-template-columns: 1fr 1fr; }
+      .ft-brand         { grid-column: span 2; }
+    }
+
+    @media (max-width: 768px) {
+      html { font-size: 17px; }
+      .pad { padding: 3.5rem 0; }
+      .main-nav, .hdr-phone { display: none; }
+      .hamburger { display: flex; }
+      .hero { min-height: 78vh; }
+      .hero-stats { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+      .stat-num { font-size: 1.85rem; }
+      .trust-inner { justify-content: flex-start; }
+      .trust-item { padding: .7rem 1.1rem; font-size: .73rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item img { height: 200px; }
+      .test-grid { grid-template-columns: 1fr; }
+      .ft-grid { grid-template-columns: 1fr; }
+      .ft-brand { grid-column: span 1; }
+      .ft-btm { flex-direction: column; text-align: center; }
+      .f-row { grid-template-columns: 1fr; }
+      .chat-win { width: calc(100vw - 3rem); right: 1rem; }
+      .hero-float, .hero-float2 { display: none; }
+    }
+
+    @media (max-width: 540px) {
+      .women-grid { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item img { height: 240px; }
+      .hero-stats { grid-template-columns: 1fr; gap: .75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header" role="banner">
+  <div class="hdr">
+    <a href="/" class="logo-link" aria-label="Marie's House Assisted Living — home">
+      <img src="Maries_logo6.png" alt="Marie's House" width="140" height="54"
+           onerror="this.style.display='none'">
+      <div class="logo-txt">
+        Marie's House
+        <span>Assisted Living · Oklahoma City</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#our-story">Our Story</a>
+      <a href="#services">Services</a>
+      <a href="#founders">Founders</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hdr-cta">
+      <a href="tel:+14055550100" class="hdr-phone" aria-label="Call (405) 555-0100">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (405) 555-0100
+      </a>
+      <a href="#contact" class="btn btn-gold" style="padding:.65rem 1.2rem;font-size:.85rem;min-height:42px;">Join Waitlist</a>
+    </div>
+
+    <button class="hamburger" id="hbg" aria-expanded="false" aria-controls="mob-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mob-nav" id="mob-nav" aria-label="Mobile navigation">
+    <a href="#about"     onclick="closeNav()">About</a>
+    <a href="#our-story" onclick="closeNav()">Our Story</a>
+    <a href="#services"  onclick="closeNav()">Services</a>
+    <a href="#founders"  onclick="closeNav()">Founders</a>
+    <a href="#faq"       onclick="closeNav()">FAQ</a>
+    <a href="#contact"   onclick="closeNav()">Contact / Apply</a>
+    <a href="tel:+14055550100" style="color:var(--gold2);">📞 (405) 555-0100</a>
+  </nav>
+</header>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge" aria-label="Women-only facility and staff">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Women-Only Facility &amp; Staff
+          </div>
+          <h1 id="hero-h1" class="hero-title">
+            A <em>Home</em> Built<br>
+            With Women<br>
+            in Mind
+          </h1>
+          <p class="hero-desc">
+            East Oklahoma City's only boutique senior assisted living facility exclusively for women — with an all-women care team, three meals a day, and a warm, dignified environment where your mother, sister, or grandmother truly belongs.
+          </p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-gold">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Join Our Waitlist
+            </a>
+            <a href="tel:+14055550100" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.4);">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (405) 555-0100
+            </a>
+          </div>
+          <div class="hero-stats" role="list">
+            <div role="listitem"><div class="stat-num">20</div><div class="stat-lbl">Max Residents<br>Boutique Scale</div></div>
+            <div role="listitem"><div class="stat-num">100%</div><div class="stat-lbl">Women<br>Staff &amp; Residents</div></div>
+            <div role="listitem"><div class="stat-num">24/7</div><div class="stat-lbl">On-Site<br>Care Team</div></div>
+          </div>
+        </div>
+
+        <!-- Image panel — hidden below 1024px -->
+        <div class="hero-img-wrap" aria-hidden="true">
+          <div class="hero-img-frame">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=75"
+                 alt="Senior Black woman smiling warmly" width="900" height="460"
+                 loading="eager" decoding="async">
+          </div>
+          <div class="hero-float">
+            <div class="float-icon" aria-hidden="true">🏡</div>
+            <div class="float-txt"><strong>East OKC's Only</strong><span>Women-Only ALF</span></div>
+          </div>
+          <div class="hero-float2">
+            <div class="f2-num">10</div>
+            <div class="f2-lbl">Private Units</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar" role="complementary" aria-label="Key highlights">
+    <div class="trust-inner">
+      <div class="trust-item"><span aria-hidden="true">♀</span> Women-Only Residents &amp; Staff</div>
+      <div class="trust-item"><span aria-hidden="true">🕐</span> 24/7 On-Site Care</div>
+      <div class="trust-item"><span aria-hidden="true">✅</span> Oklahoma RCAL Licensed</div>
+      <div class="trust-item"><span aria-hidden="true">📍</span> 3217 N Lindsay Ave · East OKC</div>
+      <div class="trust-item"><span aria-hidden="true">💚</span> ADvantage Waiver Accepted</div>
+      <div class="trust-item"><span aria-hidden="true">🌐</span> MariesHouseOKC.com</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="pad about" aria-labelledby="about-h2">
+    <div class="wrap">
+      <div class="about-grid">
+
+        <!-- Images — hidden on mobile, they still read the text -->
+        <div class="about-imgs" aria-hidden="true">
+          <div class="about-main">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=75"
+                 alt="Smiling senior Black woman in a warm home setting"
+                 width="800" height="420" loading="lazy" decoding="async">
+          </div>
+          <div class="about-sm">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=75"
+                 alt="Woman receiving compassionate care"
+                 width="400" height="160" loading="lazy" decoding="async">
+          </div>
+          <div class="about-seal">
+            <div class="seal-icon">⭐</div>
+            <div class="seal-txt">Oklahoma RCAL Certified</div>
+          </div>
+        </div>
+
+        <div class="about-text fi">
+          <div class="pill">Our Mission</div>
+          <h2 id="about-h2">Built for the Women Who Built Our Community</h2>
+          <p>Marie's House Assisted Living was founded on a simple belief: every woman deserves to age in dignity, comfort, and safety — surrounded by people who truly understand her. Too many East OKC families drive across the city to find quality senior care. We're changing that.</p>
+          <p>Located at 3217 N Lindsay Ave in East Oklahoma City, Marie's House is a brand-new boutique facility serving women 65 and older. With just 20 residents, every woman is known by name. This is not a nursing home. <strong>This is a home.</strong></p>
+          <ul class="about-checks" aria-label="Key features">
+            <li><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>All-women residents and all-women staff — always</li>
+            <li><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>East OKC's only modern assisted living within a 5-mile radius</li>
+            <li><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>3 hot meals per day, personal care, activities &amp; 24-hour supervision</li>
+            <li><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Licensed RN clinical oversight with weekly nurse consultation</li>
+            <li><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Medicaid ADvantage waiver beds available — 4 reserved spots</li>
+          </ul>
+          <a href="#contact" class="btn btn-dark">Schedule a Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STORY OF MARIE -->
+  <section id="our-story" class="marie-story" aria-labelledby="marie-h2">
+    <div class="wrap">
+      <div class="story-inner">
+
+        <div class="story-img" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?auto=format&fit=crop&w=700&q=75"
+               alt="A beloved senior woman — the spirit of Marie"
+               width="700" height="480" loading="lazy" decoding="async">
+        </div>
+
+        <div class="story-text fi">
+          <div class="pill">Why We Built This</div>
+          <h2 id="marie-h2">Built in the Spirit of <em>Marie</em></h2>
+          <p class="story-subtitle">A mother. A grandmother. The heartbeat of a family — known by her middle name, Marie.</p>
+          <p>
+            Marie was not famous. She did not need to be. She was the kind of woman who held her family together with faith, grace, and an unshakeable love for everyone who came through her door. She cooked meals that drew people in from across the neighborhood. She prayed over her children, her grandchildren, and every life she touched. She was the foundation.
+          </p>
+          <p>
+            Marie — the middle name of Harold Thompson's mother and Terrence Crawford's grandmother — is the name this family holds most dear. Harold's sister is Terrence's mother, making this not just a business partnership, but a family mission. When it came time for her to need more care than the family could provide alone, they faced what so many East OKC families face: there was nothing nearby that felt like home. Nothing that honored a woman like her.
+          </p>
+          <div class="story-quote">
+            <p>"We built Marie's House because our grandmother deserved better. And so does yours."</p>
+          </div>
+          <p>
+            This facility is her legacy. Every woman who walks through these doors will be cared for the way Marie deserved to be cared for — with dignity, with warmth, and by women who understand exactly how precious she is.
+          </p>
+          <a href="#founders" class="btn btn-gold" style="margin-top:.5rem;">Meet the Founders</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WOMEN-ONLY -->
+  <section class="pad women-sec" aria-labelledby="women-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">Our Promise</div></div>
+      <h2 class="sec-title" id="women-h2">Women Caring for Women.<br>Every Shift. Every Day.</h2>
+      <p class="sec-sub">Our women-only policy isn't a marketing line — it's the foundation of everything we do. From our residents to every care aide, every person on our team is a woman.</p>
+      <div class="women-grid">
+        <div class="women-card fi">
+          <div class="wc-icon" aria-hidden="true">🏠</div>
+          <h4>Women-Only Residents</h4>
+          <p>An all-female living environment that fosters trust, comfort, and genuine community among women who share similar life experiences.</p>
+        </div>
+        <div class="women-card fi">
+          <div class="wc-icon" aria-hidden="true">👩‍⚕️</div>
+          <h4>Women-Led Care Team</h4>
+          <p>Every care aide, nurse, and administrator is a woman — personally selected, background-checked, and above-market compensated to reduce turnover.</p>
+        </div>
+        <div class="women-card fi">
+          <div class="wc-icon" aria-hidden="true">🌺</div>
+          <h4>Community-Centered</h4>
+          <p>We serve East OKC. Our care honors Black culture, faith traditions, and the deep-rooted community bonds that define our neighborhood.</p>
+        </div>
+        <div class="women-card fi">
+          <div class="wc-icon" aria-hidden="true">🔒</div>
+          <h4>Legally Protected</h4>
+          <p>Women-only residency is legally defensible under Fair Housing Act exemptions for residential care facilities. Your loved one's safety is our priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="pad services" aria-labelledby="svc-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">What We Offer</div></div>
+      <h2 class="sec-title" id="svc-h2">Everything She Needs,<br>All in One Place</h2>
+      <p class="sec-sub">Marie's House provides a full-service living experience designed around comfort, dignity, and joy — not a checklist of clinical services.</p>
+      <div class="svc-grid">
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">🍽️</div>
+          <h4>Three Daily Meals</h4>
+          <p>Nutritious, home-cooked meals served three times daily. Prepared fresh and accommodating dietary needs and cultural preferences.</p>
+        </article>
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">💊</div>
+          <h4>Personal Care &amp; Medication</h4>
+          <p>Assistance with bathing, dressing, grooming, and medication management — provided with respect and professionalism by our trained women's care team.</p>
+        </article>
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">🌙</div>
+          <h4>24-Hour Supervision</h4>
+          <p>Minimum two trained staff on duty every shift — day and night. Our on-call pool ensures your loved one is never without support.</p>
+        </article>
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">🎨</div>
+          <h4>Activities &amp; Programming</h4>
+          <p>Daily activities coordinated by our LPN Administrator, supplemented by church partners, community volunteers, and OKC senior organizations.</p>
+        </article>
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">🏥</div>
+          <h4>Clinical Nursing Oversight</h4>
+          <p>Weekly visits from our licensed RN consultant plus daily clinical supervision from our LPN Administrator/Director of Nursing.</p>
+        </article>
+        <article class="svc-card fi">
+          <div class="svc-icon" aria-hidden="true">💳</div>
+          <h4>Medicaid Waiver Accepted</h4>
+          <p>We reserve 4 beds for Oklahoma ADvantage Medicaid waiver participants. Our team helps families navigate the application process.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="pad gallery" aria-labelledby="gal-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">Life at Marie's House</div></div>
+      <h2 class="sec-title" id="gal-h2">A Community of Joy &amp; Dignity</h2>
+      <p class="sec-sub">Every woman who walks through our doors deserves to feel celebrated. Here's a glimpse of the warmth and love that fills Marie's House.</p>
+      <div class="gallery-grid" role="list">
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?auto=format&fit=crop&w=700&q=75"
+               alt="Joyful senior Black woman smiling warmly" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">Every woman is celebrated here</div>
+        </div>
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1583795128727-6ec3642408f8?auto=format&fit=crop&w=700&q=75"
+               alt="Two senior women of color laughing together" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">Friendship and community</div>
+        </div>
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=75"
+               alt="Female caregiver holding hands with elderly woman" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">Women caring for women</div>
+        </div>
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=75"
+               alt="Senior Black woman reading peacefully" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">Comfortable, home-like spaces</div>
+        </div>
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=700&q=75"
+               alt="Senior woman enjoying morning activities" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">A new day, full of possibility</div>
+        </div>
+        <div class="gallery-item fi" role="listitem">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=75"
+               alt="Group of diverse senior women enjoying time together" loading="lazy" decoding="async" width="700" height="260">
+          <div class="gallery-cap">Three delicious meals, every day</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section id="founders" class="pad founders" aria-labelledby="founders-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">Our Founders</div></div>
+      <h2 class="sec-title" id="founders-h2">A Family Mission,<br>A Community Legacy</h2>
+      <p class="sec-sub">Marie's House was not built by investors looking for a return. It was built by a nephew and his uncle — carrying their family's matriarch in their hearts.</p>
+
+      <div class="founders-grid">
+
+        <!-- Harold -->
+        <article class="founder-card fi" aria-labelledby="harold-name">
+          <img class="founder-photo"
+               src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=75"
+               alt="Harold Thompson, Co-Founder and OKC Managing Partner"
+               width="800" height="300" loading="lazy" decoding="async">
+          <div class="founder-body">
+            <h3 class="founder-name" id="harold-name">Harold Thompson</h3>
+            <div class="founder-role">Co-Founder · OKC Managing Partner</div>
+            <div class="founder-quote">
+              <p>"She gave everything to everyone around her. The least we can do is make sure women like her have a place that honors that."</p>
+            </div>
+            <p>Harold Thompson spent 35 years as an Oklahoma City firefighter — 35 years of running toward people in their most desperate moments. He retired as one of East OKC's most trusted and recognized public servants. But it was a personal moment that changed everything.</p>
+            <p>When his mother, Miss Marie, began to need more care than the family could provide at home, Harold faced what thousands of East OKC families face every year: there was nothing nearby that truly felt like home. Nothing that honored a woman of her stature and faith. That gap became a calling.</p>
+            <p>As OKC Managing Partner, Harold brings his fire department discipline, his 35 years of community relationships, his church network, and his deep East OKC roots to every aspect of Marie's House operations. He is on the ground, in the community, every single day.</p>
+          </div>
+        </article>
+
+        <!-- Terrence -->
+        <article class="founder-card fi" aria-labelledby="terrence-name">
+          <img class="founder-photo"
+               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=75"
+               alt="Terrence Crawford, Co-Founder and Strategy Lead"
+               width="800" height="300" loading="lazy" decoding="async">
+          <div class="founder-body">
+            <h3 class="founder-name" id="terrence-name">Terrence Crawford</h3>
+            <div class="founder-role">Co-Founder · Financing &amp; Strategy Lead</div>
+            <div class="founder-quote">
+              <p>"My grandmother was the most dignified woman I've ever known. Building Marie's House is the most important thing I'll ever do."</p>
+            </div>
+            <p>For Terrence Crawford, Marie's House is not a business venture — it is a tribute to the two women who made him who he is. His grandmother — Harold Thompson's mother — is known by her middle name, Marie, and was the kind of woman who held a family together through faith, grace, and unconditional love. His mother, Harold's sister, taught him that purpose matters more than profit.</p>
+            <p>When his uncle Harold came to him with the vision for Marie's House, there was never any doubt. Terrence stepped in as the financing and strategy lead, navigating the SBA loan process, building the investor structure, and managing every dollar with the discipline this mission demands.</p>
+            <p>Terrence handles all capital strategy, lender relationships, licensing, and long-term planning — so that Harold can focus on what he does best: being present in the community his mother loved.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Gwen -->
+      <div class="admin-card fi" role="region" aria-labelledby="gwen-name">
+        <img class="admin-photo"
+             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=75"
+             alt="Gwendolyn Jackson-Blade, LPN — Administrator and Director of Nursing"
+             width="600" height="300" loading="lazy" decoding="async">
+        <div class="admin-body">
+          <h3 class="admin-name" id="gwen-name">Gwendolyn Jackson-Blade, LPN</h3>
+          <div class="admin-role">Administrator · Director of Nursing · Activities Coordinator</div>
+          <p>An accomplished Licensed Practical Nurse with deep experience in skilled nursing and long-term care, Gwendolyn brings the clinical expertise, compassion, and steady hand that Marie's House requires. Her SNF and LTACH background means 20 residents is a lighter clinical load than her prior settings — giving her the bandwidth to be both a skilled clinician and a warm, engaged presence for residents every day.</p>
+          <p>Gwendolyn holds an active Oklahoma LPN license and is currently completing all three required RCAL administrator examinations. She will serve as the heart of daily operations — caring for residents the way she would care for her own family.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="pad testimonials" aria-labelledby="test-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">Community Voice</div></div>
+      <h2 class="sec-title" id="test-h2">East OKC Has Been Waiting for This</h2>
+      <p class="sec-sub">Families across East Oklahoma City have been searching for exactly what Marie's House is building.</p>
+      <div class="test-grid">
+
+        <article class="test-card fi">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <div class="qmark" aria-hidden="true">"</div>
+          <p class="test-text">My grandmother has been in three different facilities and none of them felt like home. The idea of a women-only environment where she'd be surrounded by women who look like her and share her faith is exactly what our family has been praying for.</p>
+          <div class="test-author">
+            <img class="test-avatar"
+                 src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=75"
+                 alt="Denise M." width="120" height="120" loading="lazy" decoding="async">
+            <div><div class="author-name">Denise M.</div><div class="author-rel">Granddaughter — East OKC</div></div>
+          </div>
+        </article>
+
+        <article class="test-card fi">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <div class="qmark" aria-hidden="true">"</div>
+          <p class="test-text">I've been searching for something close to home for my aunt for two years. Everything decent is across town. A brand-new facility, all women, right here in our community — I put us on the waitlist the same day I found out.</p>
+          <div class="test-author">
+            <img class="test-avatar"
+                 src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?auto=format&fit=crop&w=120&q=75"
+                 alt="Keisha T." width="120" height="120" loading="lazy" decoding="async">
+            <div><div class="author-name">Keisha T.</div><div class="author-rel">Niece — Northeast OKC</div></div>
+          </div>
+        </article>
+
+        <article class="test-card fi">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <div class="qmark" aria-hidden="true">"</div>
+          <p class="test-text">As a nurse, I see what happens when senior women are placed where they don't feel safe or seen. Marie's House is building something we desperately need in this community — where dignity and faith come first.</p>
+          <div class="test-author">
+            <img class="test-avatar"
+                 src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=120&q=75"
+                 alt="Dr. Renee W." width="120" height="120" loading="lazy" decoding="async">
+            <div><div class="author-name">Dr. Renee W.</div><div class="author-rel">Healthcare Professional — OKC</div></div>
+          </div>
+        </article>
+
+      </div>
+      <p style="text-align:center;font-size:.78rem;color:var(--ink-low);margin-top:2rem;font-style:italic;">* Quotes represent community voices and family perspectives. Marie's House is pre-opening; no residents are currently enrolled. Individual experiences will vary.</p>
+    </div>
+  </section>
+  <section id="faq" class="pad faq" aria-labelledby="faq-h2">
+    <div class="wrap">
+      <div class="sec-label"><div class="pill">Questions &amp; Answers</div></div>
+      <h2 class="sec-title" id="faq-h2">Frequently Asked Questions</h2>
+      <p class="sec-sub">Have a question? We have answers. If you don't see yours, call us at (405) 555-0100.</p>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            Is Marie's House really a women-only facility?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Yes — 100%. Marie's House exclusively serves women 65 and older, and our entire staff is women. Every care aide, administrator, nurse, and support team member is a woman. This policy is legally protected under Fair Housing Act exemptions for residential care facilities, and it is the cornerstone of our mission.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            When will Marie's House open?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>We are currently in the construction financing phase, with SBA loan approval and groundbreaking expected in 2026. Construction is estimated at 14–16 months, with opening anticipated in 2027. We encourage families to join our waitlist now — waitlist spots are free with no commitment, and we will contact families 6 months before opening to schedule tours and begin formal applications.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            What does the monthly fee include?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Monthly fees cover your loved one's private studio unit (shared with one roommate), three full meals per day, personal care assistance, medication management, 24-hour supervision, light housekeeping and laundry, activities and programming, and weekly RN clinical consultation. For current pricing, please call us at (405) 555-0100 or use the contact form — we are happy to walk your family through all options including Medicaid waiver opportunities.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            What is the ADvantage Medicaid waiver, and does my mother qualify?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>The Oklahoma ADvantage waiver is a Medicaid Home and Community Based Services program that helps income-eligible seniors pay for personal care services in an assisted living setting. Residents generally must need assistance with daily activities and have income under approximately $2,901/month (2025 limit). We have 4 beds reserved for ADvantage waiver residents. Our team can guide your family through the application process — just call or send us a message to get started.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            How many residents will live at Marie's House?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Marie's House has 10 studio units, each housing 2 residents, for a maximum of 20 residents. This boutique scale is intentional — every resident is known by name, care is personalized, and the environment truly feels like a home, not an institution. Our staff-to-resident ratio exceeds state minimums at all times.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            Who owns and operates Marie's House?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Marie's House was co-founded by Harold Thompson and his nephew Terrence Crawford. Harold is a 35-year OKC Fire Department veteran and lifelong East OKC resident serving as on-site Managing Partner. Terrence leads financing, capital, and strategy. Both founders personally guarantee the project and are actively involved. The facility is named in honor of their mother and grandmother, Miss Marie. This is a family mission — not a passive investment company.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            Is the facility licensed and inspected?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Yes. Marie's House will operate under an Oklahoma Residential Care/Assisted Living (RCAL) license from the Oklahoma State Department of Health (OSDH), which requires annual state inspections, a licensed administrator on-site, and minimum staffing at all times. All staff are background-checked through Oklahoma's OK-SCREEN fingerprinting system before working with residents.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            How do I join the waitlist?
+            <span class="faq-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p>Fill out the form below, call us at (405) 555-0100, or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd6d1d9d0ffd2decdd6daccd7d0caccdad0d4dc91dcd0d2">[email&#160;protected]</a>. There is no cost or commitment to join the waitlist. We will contact waitlist families approximately 6 months before opening to schedule tours and begin formal applications. Medicaid waiver families should reach out early so we can help guide your ADvantage application timeline.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="pad contact" aria-labelledby="contact-h2">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div class="ci">
+          <div class="pill" style="background:rgba(200,151,60,.2);border-color:rgba(200,151,60,.45);color:var(--gold2);margin-bottom:.9rem;">Reach Out Today</div>
+          <h2 id="contact-h2">Join Our Waitlist.<br>It's Free &amp; Easy.</h2>
+          <p>Spaces at Marie's House are limited to 20 residents. Join our waitlist now to be among the first families considered. No cost, no commitment — just your place in line.</p>
+          <div class="c-detail">
+            <div class="c-ico" aria-hidden="true">📞</div>
+            <div class="c-txt"><strong>Call Us</strong><a href="tel:+14055550100">(405) 555-0100</a></div>
+          </div>
+          <div class="c-detail">
+            <div class="c-ico" aria-hidden="true">✉️</div>
+            <div class="c-txt"><strong>Email</strong><a href="/cdn-cgi/l/email-protection#6b02050d042b060a19020e1803041e180e04000845080406"><span class="__cf_email__" data-cfemail="e980878f86a984889b808c9a81869c9a8c86828ac78a8684">[email&#160;protected]</span></a></div>
+          </div>
+          <div class="c-detail">
+            <div class="c-ico" aria-hidden="true">🌐</div>
+            <div class="c-txt"><strong>Website</strong><span>MariesHouseOKC.com</span></div>
+          </div>
+          <div class="c-detail">
+            <div class="c-ico" aria-hidden="true">📍</div>
+            <div class="c-txt"><strong>Location</strong><span>3217 N Lindsay Ave<br>East Oklahoma City, OK 73105</span></div>
+          </div>
+          <div class="c-detail">
+            <div class="c-ico" aria-hidden="true">🕐</div>
+            <div class="c-txt"><strong>Office Hours</strong><span>Monday–Friday: 9am–5pm CST</span></div>
+          </div>
+        </div>
+
+        <div class="cf">
+          <h3>Waitlist Application</h3>
+          <p>We'll respond within 1 business day.</p>
+          <form id="cform" novalidate>
+            <div class="f-row">
+              <div class="fg">
+                <label for="fn">Your Name <span class="req">*</span></label>
+                <input type="text" id="fn" name="familyName" required autocomplete="name" placeholder="Full name">
+              </div>
+              <div class="fg">
+                <label for="ph">Phone <span class="req">*</span></label>
+                <input type="tel" id="ph" name="phone" required autocomplete="tel" placeholder="(405) 000-0000">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="em">Email Address</label>
+              <input type="email" id="em" name="email" autocomplete="email" placeholder="your@email.com">
+            </div>
+            <div class="fg">
+              <label for="rn">Resident's Name <span class="req">*</span></label>
+              <input type="text" id="rn" name="residentName" required placeholder="Who needs care?">
+            </div>
+            <div class="f-row">
+              <div class="fg">
+                <label for="tl">Timeline</label>
+                <select id="tl" name="timeline">
+                  <option value="">Select…</option>
+                  <option>Within 6 months of opening</option>
+                  <option>Within 3 months of opening</option>
+                  <option>As soon as possible</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="pt">Payment Type</label>
+                <select id="pt" name="payType">
+                  <option value="">Select…</option>
+                  <option>Private Pay</option>
+                  <option>ADvantage / Medicaid Waiver</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg">
+              <label for="msg">Tell Us About Your Loved One (optional)</label>
+              <textarea id="msg" name="message" rows="3" placeholder="Care needs, questions, or anything you'd like us to know…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;" id="sbtn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Submit Waitlist Application
+            </button>
+            <div class="form-ok" id="fok" role="alert" aria-live="polite">
+              ✅ Thank you! We'll be in touch within 1 business day.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════ LEGAL MODALS ═══════════════ -->
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;overflow-y:auto;padding:2rem 1rem;">
+  <div style="background:#fff;max-width:680px;margin:0 auto;border-radius:20px;padding:2.5rem;position:relative;">
+    <button onclick="document.getElementById('privacyModal').style.display='none'" aria-label="Close privacy policy" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink-low);">✕</button>
+    <h2 id="privacy-title" style="font-family:var(--serif);color:var(--forest);margin-bottom:1rem;">Privacy Policy</h2>
+    <p style="font-size:.85rem;color:var(--ink-low);margin-bottom:1.5rem;">Last updated: March 2026 · Marie's House Assisted Living, LLC · MariesHouseOKC.com</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Information We Collect</h4>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">When you submit a waitlist application, we collect your name, phone number, email address, and information about the prospective resident's care needs. This information is used solely to contact you about Marie's House Assisted Living and to facilitate the admissions process.</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">How We Use Your Information</h4>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">We use your information to respond to inquiries, manage the waitlist, schedule tours, and communicate updates about Marie's House. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Health Information</h4>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">Any health-related information you voluntarily share on this website (such as care needs in the inquiry form) is treated with strict confidentiality. This website does not collect or store Protected Health Information (PHI) as defined by HIPAA. Formal HIPAA-compliant agreements will be executed upon admission.</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Data Security</h4>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">We use industry-standard security practices to protect your information. Form submissions are transmitted over secure HTTPS connections.</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Your Rights</h4>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">You may request deletion of your information at any time by contacting us at <a href="/cdn-cgi/l/email-protection#3950575f567954584b505c4a51564c4a5c56525a175a5654"><span class="__cf_email__" data-cfemail="20494e464f604d4152494553484f5553454f4b430e434f4d">[email&#160;protected]</span></a> or calling (405) 555-0100.</p>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Contact</h4>
+    <p style="font-size:.95rem;color:var(--ink-mid);">Marie's House Assisted Living, LLC · 3217 N Lindsay Ave · Oklahoma City, OK 73105 · <a href="tel:+14055550100">(405) 555-0100</a></p>
+  </div>
+</div>
+
+<!-- Accessibility Modal -->
+<div id="a11yModal" role="dialog" aria-modal="true" aria-labelledby="a11y-title" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;overflow-y:auto;padding:2rem 1rem;">
+  <div style="background:#fff;max-width:680px;margin:0 auto;border-radius:20px;padding:2.5rem;position:relative;">
+    <button onclick="document.getElementById('a11yModal').style.display='none'" aria-label="Close accessibility statement" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink-low);">✕</button>
+    <h2 id="a11y-title" style="font-family:var(--serif);color:var(--forest);margin-bottom:1rem;">Accessibility Statement</h2>
+    <p style="font-size:.85rem;color:var(--ink-low);margin-bottom:1.5rem;">Marie's House Assisted Living is committed to digital accessibility for people with disabilities.</p>
+    <p style="margin-bottom:1rem;font-size:.95rem;color:var(--ink-mid);">This website aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. We have implemented the following accessibility features:</p>
+    <ul style="margin:0 0 1rem 1.5rem;font-size:.95rem;color:var(--ink-mid);line-height:1.8;">
+      <li>Skip navigation link for keyboard users</li>
+      <li>ARIA landmarks and labels throughout the page</li>
+      <li>Minimum 18px base font size for readability</li>
+      <li>Color contrast ratios meeting WCAG AA standards</li>
+      <li>Keyboard-navigable interface with visible focus indicators</li>
+      <li>Descriptive alt text on all meaningful images</li>
+      <li>Form labels associated with all input fields</li>
+      <li>Live regions for dynamic content (chat, form feedback)</li>
+      <li>Voice/text-to-speech option in the chat assistant</li>
+      <li>Responsive design for all screen sizes and zoom levels</li>
+    </ul>
+    <h4 style="color:var(--forest);margin-bottom:.5rem;">Feedback &amp; Contact</h4>
+    <p style="font-size:.95rem;color:var(--ink-mid);">If you experience any accessibility barriers on this website, please contact us. We take all feedback seriously and work to make improvements promptly.</p>
+    <p style="margin-top:.75rem;font-size:.95rem;color:var(--ink-mid);"><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#f891969e97b895998a919d8b90978d8b9d97939bd69b9795"><span class="__cf_email__" data-cfemail="c6afa8a0a986aba7b4afa3b5aea9b3b5a3a9ada5e8a5a9ab">[email&#160;protected]</span></a><br><strong>Phone:</strong> <a href="tel:+14055550100">(405) 555-0100</a></p>
+  </div>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="Maries_logo6.png" alt="Marie's House Assisted Living" width="180" height="80"
+             onerror="this.style.display='none'">
+        <p>East Oklahoma City's only women-only senior assisted living facility. Built in the spirit of Marie — by family, for family.</p>
+        <p style="margin-top:.6rem;font-size:.78rem;opacity:.55;">3217 N Lindsay Ave · Oklahoma City, OK 73105<br>MariesHouseOKC.com</p>
+      </div>
+      <div class="ft-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Join Waitlist</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+14055550100">(405) 555-0100</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#bad3d4dcd5fad7dbc8d3dfc9d2d5cfc9dfd5d1d994d9d5d7"><span class="__cf_email__" data-cfemail="2f464149406f424e5d464a5c47405a5c4a40444c014c4042">[email&#160;protected]</span></a></li>
+          <li><a href="#contact">Apply / Waitlist</a></li>
+        </ul>
+        <h5 style="margin-top:1.35rem;">Resources</h5>
+        <ul>
+          <li><a href="https://oklahoma.gov/ohca" target="_blank" rel="noopener">ADvantage Waiver Info</a></li>
+          <li><a href="https://oklahoma.gov/health" target="_blank" rel="noopener">Oklahoma OSDH</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-btm">
+      <span>© 2026 Marie's House Assisted Living, LLC · All rights reserved</span>
+      <span><a href="#" onclick="document.getElementById('privacyModal').style.display='block';return false;">Privacy Policy</a> · <a href="#" onclick="document.getElementById('a11yModal').style.display='block';return false;">Accessibility</a> · <a href="/cdn-cgi/l/email-protection#e58c8b838aa58884978c80968d8a9096808a8e86cb868a88">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ CHATBOT ═══════════════ -->
+<div class="chat-fab" role="complementary" aria-label="Chat with our assistant">
+  <button class="chat-fab-btn" id="chatBtn" aria-expanded="false" aria-controls="chatWin" aria-label="Open chat">
+    <span id="chatIcon">💬</span>
+    <span class="chat-badge" id="chatBadge">Hi!</span>
+  </button>
+  <div class="chat-tip" aria-hidden="true">Ask us anything!</div>
+</div>
+
+<div class="chat-win" id="chatWin" role="dialog" aria-modal="true" aria-labelledby="chat-title">
+  <div class="chat-hdr">
+    <div class="chat-av">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=80&q=75"
+           alt="Marie's House Assistant" width="40" height="40">
+    </div>
+    <div>
+      <div class="chat-hdr-name" id="chat-title">Marie's House Assistant</div>
+      <div class="chat-hdr-status">Online — here to help</div>
+    </div>
+    <button class="chat-x" id="chatX" aria-label="Close chat">✕</button>
+    <button class="chat-voice-btn" id="voiceBtn" aria-label="Toggle voice — currently off" aria-pressed="false" title="Toggle voice reading">🔇</button>
+  </div>
+
+  <div class="chat-msgs" id="chatMsgs" aria-live="polite">
+    <div class="cmsg bot">
+      <div class="msg-av"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=60&q=75" alt="" aria-hidden="true"></div>
+      <div class="bubble">Hello! 👋 I'm the Marie's House assistant. I can answer questions about our women-only assisted living facility in East Oklahoma City.<br><br>How can I help you and your family today?</div>
+    </div>
+  </div>
+
+  <div class="quick-replies" id="qreplies">
+    <button class="qr" onclick="qReply('What is included in care?')">What's included?</button>
+    <button class="qr" onclick="qReply('How do I join the waitlist?')">Join waitlist</button>
+    <button class="qr" onclick="qReply('Do you accept ADvantage Medicaid waiver?')">Medicaid?</button>
+    <button class="qr" onclick="qReply('When will you open?')">Opening date?</button>
+  </div>
+
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chatInput" placeholder="Type your question…" rows="1" aria-label="Your message" onkeydown="chatKey(event)"></textarea>
+    <button class="send-btn" aria-label="Send" onclick="sendChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+  <div class="chat-powered">Powered by AI · MariesHouseOKC.com · Oklahoma City, OK</div>
+</div>
+
+
+<!-- ═══════════════ LEGAL MODALS ═══════════════ -->
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacy-title"
+     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;overflow-y:auto;padding:2rem 1rem;">
+  <div style="background:#fff;max-width:680px;margin:0 auto;border-radius:20px;padding:2.5rem;position:relative;">
+    <button onclick="document.getElementById('privacyModal').style.display='none'"
+            aria-label="Close privacy policy"
+            style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666;">✕</button>
+    <h2 id="privacy-title" style="font-family:'Cormorant Garamond',Georgia,serif;color:#1B3A2D;margin-bottom:1rem;">Privacy Policy</h2>
+    <p style="font-size:.82rem;color:#666;margin-bottom:1.5rem;">Last updated: March 2026 · Marie's House Assisted Living, LLC · MariesHouseOKC.com</p>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">Information We Collect</h4>
+    <p style="margin-bottom:1rem;font-size:.93rem;color:#3D3D3D;line-height:1.7;">When you submit a waitlist application we collect your name, phone number, email address, and information about the prospective resident's care needs. This is used solely to contact you about Marie's House and to facilitate the admissions process.</p>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">How We Use Your Information</h4>
+    <p style="margin-bottom:1rem;font-size:.93rem;color:#3D3D3D;line-height:1.7;">We use your information to respond to inquiries, manage the waitlist, schedule tours, and communicate updates about Marie's House. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">Health Information &amp; HIPAA</h4>
+    <p style="margin-bottom:1rem;font-size:.93rem;color:#3D3D3D;line-height:1.7;">Any health-related information you voluntarily share on this website is treated with strict confidentiality. This pre-opening website does not collect or store Protected Health Information (PHI) as defined by HIPAA. Formal HIPAA-compliant agreements and disclosures will be executed as part of the admission process.</p>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">Your Rights</h4>
+    <p style="margin-bottom:1rem;font-size:.93rem;color:#3D3D3D;line-height:1.7;">You may request deletion of your information at any time by contacting <a href="/cdn-cgi/l/email-protection#e881868e87a885899a818d9b80879d9b8d87838bc68b8785" style="color:#1B3A2D;font-weight:700;"><span class="__cf_email__" data-cfemail="b7ded9d1d8f7dad6c5ded2c4dfd8c2c4d2d8dcd499d4d8da">[email&#160;protected]</span></a> or calling <a href="tel:+14055550100" style="color:#1B3A2D;font-weight:700;">(405) 555-0100</a>.</p>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">Contact</h4>
+    <p style="font-size:.93rem;color:#3D3D3D;">Marie's House Assisted Living, LLC · 3217 N Lindsay Ave · Oklahoma City, OK 73105</p>
+  </div>
+</div>
+
+<!-- Accessibility Statement Modal -->
+<div id="a11yModal" role="dialog" aria-modal="true" aria-labelledby="a11y-title"
+     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;overflow-y:auto;padding:2rem 1rem;">
+  <div style="background:#fff;max-width:680px;margin:0 auto;border-radius:20px;padding:2.5rem;position:relative;">
+    <button onclick="document.getElementById('a11yModal').style.display='none'"
+            aria-label="Close accessibility statement"
+            style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666;">✕</button>
+    <h2 id="a11y-title" style="font-family:'Cormorant Garamond',Georgia,serif;color:#1B3A2D;margin-bottom:1rem;">Accessibility Statement</h2>
+    <p style="font-size:.82rem;color:#666;margin-bottom:1.25rem;">Marie's House Assisted Living is committed to digital accessibility for people with disabilities, including seniors.</p>
+    <p style="margin-bottom:1rem;font-size:.93rem;color:#3D3D3D;line-height:1.7;">This website aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. Implemented features include:</p>
+    <ul style="margin:0 0 1rem 1.5rem;font-size:.93rem;color:#3D3D3D;line-height:1.9;">
+      <li>Skip navigation link for keyboard users</li>
+      <li>ARIA landmarks, roles, and labels throughout</li>
+      <li>Minimum 18px base font size for readability</li>
+      <li>Color contrast ratios meeting or exceeding WCAG 2.1 AA on all elements</li>
+      <li>Keyboard-navigable interface with visible focus indicators</li>
+      <li>Descriptive alt text on all meaningful images; decorative images marked aria-hidden</li>
+      <li>All form inputs have associated visible labels</li>
+      <li>Live regions for dynamic content (chat responses, form confirmation)</li>
+      <li>Voice / text-to-speech option in the AI chat assistant (🔊 button)</li>
+      <li>Fully responsive design supporting all screen sizes and 200% zoom</li>
+      <li>Semantic HTML heading hierarchy (h1 → h2 → h3 → h4)</li>
+    </ul>
+    <h4 style="color:#1B3A2D;margin-bottom:.4rem;font-family:'Nunito',sans-serif;">Feedback</h4>
+    <p style="font-size:.93rem;color:#3D3D3D;">If you experience any accessibility barriers, please contact us. We respond to all accessibility feedback within 2 business days.<br>
+    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#7f161119103f121e0d161a0c17100a0c1a10141c511c1012" style="color:#1B3A2D;font-weight:700;"><span class="__cf_email__" data-cfemail="e881868e87a885899a818d9b80879d9b8d87838bc68b8785">[email&#160;protected]</span></a> &nbsp;
+    <strong>Phone:</strong> <a href="tel:+14055550100" style="color:#1B3A2D;font-weight:700;">(405) 555-0100</a></p>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="Maries_logo6.png" alt="Marie's House Assisted Living" width="180" height="80"
+             onerror="this.style.display='none'">
+        <p>East Oklahoma City's only women-only senior assisted living facility. Built in the spirit of Marie — by family, for family.</p>
+        <p style="margin-top:.6rem;font-size:.78rem;opacity:.55;">3217 N Lindsay Ave · Oklahoma City, OK 73105<br>MariesHouseOKC.com</p>
+      </div>
+      <div class="ft-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Join Waitlist</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+14055550100">(405) 555-0100</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#c1a8afa7ae81aca0b3a8a4b2a9aeb4b2a4aeaaa2efa2aeac"><span class="__cf_email__" data-cfemail="4b22252d240b262a39222e3823243e382e24202865282426">[email&#160;protected]</span></a></li>
+          <li><a href="#contact">Apply / Waitlist</a></li>
+        </ul>
+        <h5 style="margin-top:1.35rem;">Resources</h5>
+        <ul>
+          <li><a href="https://oklahoma.gov/ohca" target="_blank" rel="noopener">ADvantage Waiver Info</a></li>
+          <li><a href="https://oklahoma.gov/health" target="_blank" rel="noopener">Oklahoma OSDH</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-btm">
+      <span>© 2026 Marie's House Assisted Living, LLC · All rights reserved</span>
+      <span>
+        <a href="#" onclick="document.getElementById('privacyModal').style.display='block';return false;">Privacy Policy</a> ·
+        <a href="#" onclick="document.getElementById('a11yModal').style.display='block';return false;">Accessibility</a> ·
+        <a href="/cdn-cgi/l/email-protection#99f0f7fff6d9f4f8ebf0fceaf1f6eceafcf6f2fab7faf6f4">Contact</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ CHATBOT ═══════════════ -->
+<div class="chat-fab" role="complementary" aria-label="Chat with our assistant">
+  <button class="chat-fab-btn" id="chatBtn" aria-expanded="false" aria-controls="chatWin" aria-label="Open chat with Marie's House assistant">
+    <span id="chatIcon">💬</span>
+    <span class="chat-badge" id="chatBadge">Hi!</span>
+  </button>
+  <div class="chat-tip" aria-hidden="true">Ask us anything!</div>
+</div>
+
+<div class="chat-win" id="chatWin" role="dialog" aria-modal="true" aria-labelledby="chat-title">
+  <div class="chat-hdr">
+    <div class="chat-av">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=80&q=75"
+           alt="Marie's House Care Assistant" width="40" height="40">
+    </div>
+    <div style="flex:1;">
+      <div class="chat-hdr-name" id="chat-title">Marie's House Assistant</div>
+      <div class="chat-hdr-status">Online — here to help</div>
+    </div>
+    <button class="chat-voice-btn" id="voiceBtn"
+            aria-label="Turn voice reading on — currently off"
+            aria-pressed="false"
+            title="Toggle voice — reads bot replies aloud">🔇</button>
+    <button class="chat-x" id="chatX" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chat-msgs" id="chatMsgs" aria-live="polite" aria-label="Chat conversation">
+    <div class="cmsg bot">
+      <div class="msg-av">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=60&q=75"
+             alt="" aria-hidden="true" width="28" height="28">
+      </div>
+      <div class="bubble">
+        Hello! 👋 I'm the Marie's House assistant.<br><br>
+        I can answer questions about our women-only senior assisted living facility in East Oklahoma City. Tap 🔇 above to have me read aloud — great for low vision or hands-free use.<br><br>
+        How can I help you today?
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-replies" id="qreplies" aria-label="Quick question buttons">
+    <button class="qr" onclick="qReply('What is included in the monthly care?')">What's included?</button>
+    <button class="qr" onclick="qReply('How do I join the waitlist?')">Join waitlist</button>
+    <button class="qr" onclick="qReply('Do you accept ADvantage Medicaid waiver?')">Medicaid?</button>
+    <button class="qr" onclick="qReply('When will Marie\'s House open?')">Opening date?</button>
+  </div>
+
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chatInput"
+              placeholder="Type your question…" rows="1"
+              aria-label="Your message to the assistant"
+              onkeydown="chatKey(event)"></textarea>
+    <button class="send-btn" aria-label="Send message" onclick="sendChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+  <div class="chat-powered">Powered by AI · MariesHouseOKC.com · Oklahoma City, OK</div>
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── Mobile nav ──
+const hbg    = document.getElementById('hbg');
+const mobNav = document.getElementById('mob-nav');
+hbg.addEventListener('click', () => {
+  const isOpen = mobNav.classList.toggle('open');
+  hbg.classList.toggle('open', isOpen);
+  hbg.setAttribute('aria-expanded', isOpen);
+});
+function closeNav() {
+  mobNav.classList.remove('open');
+  hbg.classList.remove('open');
+  hbg.setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('click', e => {
+  if (!hbg.contains(e.target) && !mobNav.contains(e.target)) closeNav();
+});
+
+// ── Smooth scroll ──
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const hash = link.getAttribute('href');
+    if (hash === '#') return;
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + scrollY - 80, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── Fade-in on scroll ──
+const scrollObs = new IntersectionObserver(
+  entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('on'); }),
+  { threshold: 0.1 }
+);
+document.querySelectorAll('.fi').forEach(el => scrollObs.observe(el));
+
+// ── FAQ accordion ──
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const wasOpen = btn.getAttribute('aria-expanded') === 'true';
+  // Close all
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.setAttribute('aria-expanded', 'false');
+    q.nextElementSibling.classList.remove('open');
+  });
+  // Open clicked if it was closed
+  if (!wasOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    answer.classList.add('open');
+  }
+}
+
+// ── Modals: close on backdrop click or Escape ──
+['privacyModal', 'a11yModal'].forEach(id => {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    ['privacyModal', 'a11yModal'].forEach(id => {
+      const m = document.getElementById(id);
+      if (m) m.style.display = 'none';
+    });
+    if (chatOpen) toggleChat(false);
+  }
+});
+
+// ── Contact / Waitlist form ──
+document.getElementById('cform').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let isValid = true;
+  this.querySelectorAll('[required]').forEach(field => {
+    const filled = field.value.trim();
+    field.style.borderColor = filled ? '' : '#c0392b';
+    field.setAttribute('aria-invalid', filled ? 'false' : 'true');
+    if (!filled) isValid = false;
+  });
+  if (!isValid) {
+    this.querySelector('[aria-invalid="true"]')?.focus();
+    return;
+  }
+  const submitBtn = document.getElementById('sbtn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting…';
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(Object.fromEntries(new FormData(this)))
+  }).finally(() => {
+    document.getElementById('fok').style.display = 'block';
+    submitBtn.style.display = 'none';
+    this.reset();
+  });
+});
+
+// ═══════════════════════════════════════════════════════
+// CHATBOT + VOICE (Web Speech API Text-to-Speech)
+// ═══════════════════════════════════════════════════════
+const chatBtn  = document.getElementById('chatBtn');
+const chatX    = document.getElementById('chatX');
+const chatWin  = document.getElementById('chatWin');
+const chatMsgs = document.getElementById('chatMsgs');
+const chatInp  = document.getElementById('chatInput');
+const qrs      = document.getElementById('qreplies');
+const voiceBtn = document.getElementById('voiceBtn');
+
+let chatHistory = [];
+let chatOpen    = false;
+let voiceOn     = false;
+
+// ── Voice / TTS setup ──
+const synth = window.speechSynthesis;
+let selectedVoice = null;
+
+function pickVoice() {
+  const voices = synth.getVoices();
+  // Prefer a US-English female voice — great for senior accessibility
+  selectedVoice =
+    voices.find(v => v.lang === 'en-US' && /samantha|zira|susan|ava|nicky|victoria|allison/i.test(v.name)) ||
+    voices.find(v => v.lang.startsWith('en') && /female|woman/i.test(v.name)) ||
+    voices.find(v => v.lang.startsWith('en')) ||
+    voices[0] || null;
+}
+pickVoice();
+if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = pickVoice;
+
+function speak(text) {
+  if (!voiceOn || !synth) return;
+  synth.cancel();
+  // Strip markdown and URLs for clean speech
+  const clean = text
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/\n+/g, '. ')
+    .trim();
+  const utt = new SpeechSynthesisUtterance(clean);
+  utt.rate   = 0.88;  // slightly slower — better for seniors
+  utt.pitch  = 1.05;
+  utt.volume = 1;
+  if (selectedVoice) utt.voice = selectedVoice;
+  synth.speak(utt);
+}
+
+// Voice toggle button
+voiceBtn.addEventListener('click', () => {
+  voiceOn = !voiceOn;
+  voiceBtn.setAttribute('aria-pressed', voiceOn);
+  voiceBtn.setAttribute('aria-label', `Turn voice reading ${voiceOn ? 'off' : 'on'} — currently ${voiceOn ? 'on' : 'off'}`);
+  voiceBtn.textContent = voiceOn ? '🔊' : '🔇';
+  if (!voiceOn) {
+    synth.cancel();
+  } else {
+    speak("Voice mode is on. I will read my responses aloud for you.");
+  }
+});
+
+// ── Chat open / close ──
+chatBtn.addEventListener('click', () => toggleChat(!chatOpen));
+chatX.addEventListener('click',   () => toggleChat(false));
+
+function toggleChat(state) {
+  chatOpen = state;
+  chatWin.classList.toggle('open', chatOpen);
+  chatBtn.setAttribute('aria-expanded', chatOpen);
+  document.getElementById('chatIcon').textContent  = chatOpen ? '✕' : '💬';
+  document.getElementById('chatBadge').style.display = chatOpen ? 'none' : '';
+  if (chatOpen) {
+    chatInp.focus();
+  } else {
+    synth.cancel();
+  }
+}
+
+// ── Quick reply chips ──
+function qReply(text) {
+  chatInp.value = text;
+  sendChat();
+  qrs.style.display = 'none';
+}
+
+// ── Append message bubble ──
+function appendMsg(role, text) {
+  const wrap = document.createElement('div');
+  wrap.className = 'cmsg ' + role;
+  const html = text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  if (role === 'bot') {
+    wrap.innerHTML =
+      `<div class="msg-av">
+         <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=60&q=75"
+              alt="" aria-hidden="true" width="28" height="28">
+       </div>
+       <div class="bubble">${html}</div>`;
+  } else {
+    wrap.innerHTML = `<div class="bubble">${html}</div>`;
+  }
+  chatMsgs.appendChild(wrap);
+  chatMsgs.scrollTop = chatMsgs.scrollHeight;
+}
+
+// ── Typing indicator ──
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'cmsg bot typing';
+  div.id = 'typing-indicator';
+  div.innerHTML =
+    `<div class="msg-av">
+       <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=60&q=75"
+            alt="" aria-hidden="true" width="28" height="28">
+     </div>
+     <div class="bubble">
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+     </div>`;
+  chatMsgs.appendChild(div);
+  chatMsgs.scrollTop = chatMsgs.scrollHeight;
+}
+function hideTyping() {
+  document.getElementById('typing-indicator')?.remove();
+}
+
+// ── Send message ──
+async function sendChat() {
+  const text = chatInp.value.trim();
+  if (!text) return;
+  chatInp.value = '';
+  chatInp.style.height = '';
+  qrs.style.display = 'none';
+  appendMsg('user', text);
+  chatHistory.push({ role: 'user', content: text });
+  showTyping();
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: chatHistory })
+    });
+    hideTyping();
+    const data = await res.json();
+    const reply = data.reply ||
+      "I'm having a little trouble right now. Please call **(405) 555-0100** — we'd love to help! 💚";
+    appendMsg('bot', reply);
+    chatHist
